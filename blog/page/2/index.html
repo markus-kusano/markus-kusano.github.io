@@ -9,8 +9,8 @@
   <meta name="author" content="Markus Kusano">
 
   
-  <meta name="description" content="One of the many consequences of the exponential power-versus-time curve in
-computing, and the corresponding pace of software development, is that 50 &hellip;">
+  <meta name="description" content="Introduction LLVM and its intermediate representation (IR) are quickly
+becoming and de facto standard for program analysis and instrumentation. This &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -62,6 +62,120 @@ computing, and the corresponding pace of software development, is that 50 &helli
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/">Modifying a Build System to Output LLVM IR</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-13T15:53:00-04:00" pubdate data-updated="true">Sep 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Introduction</h2>
+
+<p><a href="http://llvm.org/">LLVM</a> and its intermediate representation (IR) are quickly
+becoming and de facto standard for program analysis and instrumentation. This
+is a guide to modify an established build system of an application to output
+LLVM IR instead of machine code. Specifically, we will outline how to output
+LLVM IR for an application using
+<a href="https://en.wikipedia.org/wiki/GNU_build_system">autotools</a>.</p>
+
+<h2>Requirements</h2>
+
+<p>The requirements are:</p>
+
+<ul>
+<li>The GNU gold linker with plugin support</li>
+<li>The LLVMgold plugin</li>
+</ul>
+
+
+<p>Detailed instructions on using the LLVM GNU gold plugin can be found
+<a href="http://llvm.org/docs/GoldPlugin.html">here</a>.</p>
+
+<p>A quick summary to check if your system has support for LLVMgold:</p>
+
+<p>Run <code>/usr/bin/ld -v</code> and check if it reports <code>GNU gold</code>. To check if you have
+plugin support run <code>/usr/bin/ld -plugin</code>; if it reports <code>missing argument</code> then
+you are good to go. If it reports <code>unknown option</code> you will need to install or
+build a version of GNU gold that supports plugins.</p>
+
+<p>LLVM provides
+<a href="http://llvm.org/docs/GoldPlugin.html#lto-how-to-build">documentation</a>  on
+building GNU gold with plugin support and LLVMgold.</p>
+
+<h2>LLVM&rsquo;s gold Plugin</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Gold_(linker">gold</a>) is part of GNU binutils and
+is a linker with support for link time optimization (LTO). LLVM provides a gold
+plugin to preform LTO which inherently works by keeping source files as LLVM IR
+until link time. At link time, the entire program can be observed and
+optimized.</p>
+
+<p>We&rsquo;re not so interested in the LTO aspects but rather the ability to keep files
+as LLVM IR until link time. The end result is a set of &ldquo;object files&rdquo; which are
+LLVM IR; If you want to make an LLVM pass on an entire program, this is a good
+starting point but beyond the scope of this post.</p>
+
+<h2>Autotools</h2>
+
+<p>To work with autotools, we simply need to modify some environment variables to
+specify options passed to <code>clang</code>.</p>
+
+<p>If <code>clang</code> and <code>binutils</code> are not in your path, let <code>$PREFIX</code> be where they are
+installed. <code>export</code> the following environment variables.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export CC="$PREFIX/bin/clang -emit-llvm"
+</span><span class='line'>export CXX="$PREFIX/bin/clang++ -emit-llvm"
+</span><span class='line'>export AR="$PREFIX/bin/ar"
+</span><span class='line'>export NM="$PREFIX/bin/nm"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If they are in your path, you simply need:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export CC=clang -emit-llvm
+</span><span class='line'>export CXX=clang++ -emit-llvm</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, simply build the program as usual. The end result should be a set of
+<code>.o</code> files which are all LLVM bitcode.</p>
+
+<p>Without the GNU gold linker and LLVMgold plugin you will get linker errors by
+using <code>-emit-llvm</code>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -154,6 +268,10 @@ code from python)</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/28/baking-bread/">Baking Bread</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/03/learning-programming/">Learning Programming</a>
       </li>
     
@@ -167,10 +285,6 @@ code from python)</p>
     
       <li class="post">
         <a href="/blog/2013/12/11/my-coding-setup/">My Coding Setup</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/26/a-balanced-brace-checker/">A Balanced Brace Checker</a>
       </li>
     
   </ul>
