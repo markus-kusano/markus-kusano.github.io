@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A Balanced Brace Checker - Markus Kusano</title>
+  <meta name="author" content="Markus Kusano">
+
+  
+  <meta name="description" content="Recently in Intro to Unix we had to implement a balanced brace checker.
+Specifically, the tool was supposed to ensure that every opening brace has a &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Markus Kusano" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:markus-kusano.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/reading">Reading list</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">A Balanced Brace Checker</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-26T12:30:00-05:00" pubdate data-updated="true">Nov 26<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Recently in Intro to Unix we had to implement a balanced brace checker.
+Specifically, the tool was supposed to ensure that every opening brace has a
+matching closing brace and vice versa.</p>
+
+<p>This is a fairly common assignment, though I had never actually done it before.
+I was introduced to in Virginia Tech&rsquo;s second year programming course (data
+structures and algorithms) as an introduction to recursive (or stack) based
+algorithms. I think some recent classes in Data Structures actually had this as
+an assignment so I can guess why we would do it again. It lets the student see
+how they could have made their original implementation follow the Unix design
+philosophy.</p>
+
+<h2>Intro to Unix&rsquo;s Position in Undergrad Curriculum</h2>
+
+<p>Intro to Unix has an interesting position in the undergrad Computer Engineering
+curriculum since it is not a pre-requisite for any class. I&rsquo;ve actually
+finished taking all my programming courses this semester so it makes me wonder
+the benefits of learning about fundamental design patterns so late. Of course
+in future work I could apply these ideas but I believe it would have been
+better to have some time to practice these ideas in school.</p>
+
+<p>I really believe many of the core Unix design concepts are important to making
+modern and scalable code, especially the concepts of modularity. In my mind,
+Modularity goes hand-in-hand with code written in a <em>purely functional</em> style.</p>
+
+<h2>Pure Functions</h2>
+
+<p>Pure functions are completely compartmentalized: you pass in data and you get
+out data. For example, I would hope the function <code>add(int a, int b)</code> is a pure
+function returning  <code>a + b</code>. There are no flags in the code or assumptions
+made, the function always does the same thing. There is basically no state
+maintained across function calls.</p>
+
+<h3>Parallelization</h3>
+
+<p>This can be useful because if there is no state, or if the state is all
+internal to the function, then there is no synchronization required. These are
+so called embarrassingly parallel (or trivially parallel) problems. Imposing
+<em>order</em> on a multi-threaded or distributed system is a expensive. The
+<a href="http://www.bloom-lang.net/">Bloom</a> programming language makes it easy to see
+these points of order allowing you to reduce them and make things scale.</p>
+
+<p>John Carmack, creator of games like Doom, Quake and Commander Keen, speaking at
+Quakecon 2013, outlines a similar vision for how functional programming can
+aide in speedier game development for just these reasons
+(<a href="http://youtu.be/1PhArSujR_A">Video</a>). Of course you don&rsquo;t actually need a
+programming language that enforces pure functional style as on long as the team
+you are working with does not break the rules.</p>
+
+<p>Carmack makes the point that writing in a functional style is difficult, or
+at least different, especially when coming from procedural languages like Java
+or C. Its not like a team can just sit down with
+<a href="http://www.haskell.org/haskellwiki/Haskell">Haskell</a> and pump out thousands of
+games overnight. It will take a lot of work to iron out the details of working
+in this style.</p>
+
+<h2>Our Curriculum</h2>
+
+<p>So, how does all of this relate to our classes? If we are only briefly
+introduced to design concepts, such as modularity, that are perhaps difficult
+to implement but rewarding in the long run then how can we expect to use them
+without more practice? I&rsquo;m guessing we&rsquo;d need some classes where we are
+required to write in this style in order for it to become closer to second
+nature. What about when you are introduced to these concepts right before
+you&rsquo;re graduating? Will you really use them later in life?</p>
+
+<p>Of course, being able to hack out a homework assignment or project quickly
+means taking shortcuts. It means it will be held together with duct tape, and
+this is how real software is made. So I&rsquo;m not really sure what the best course
+of action would be.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Markus Kusano</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-26T12:30:00-05:00" pubdate data-updated="true">Nov 26<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/brace-checker/'>brace checker</a>, <a class='category' href='/blog/categories/ece2524/'>ece2524</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker/" data-via="" data-counturl="http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/11/07/ase-2013/" title="Previous Post: ASE 2013">&laquo; ASE 2013</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/12/11/my-coding-setup/" title="Next Post: My Coding Setup">My Coding Setup &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/03/learning-programming/">Learning Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/03/cheating/">Shades of Cheating</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/11/blogging-setup/">My Blogging Setup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/11/my-coding-setup/">My Coding Setup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/26/a-balanced-brace-checker/">A Balanced Brace Checker</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/markus-kusano">@markus-kusano</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'markus-kusano',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Markus Kusano <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'markusk';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker/';
+        var disqus_url = 'http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

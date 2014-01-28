@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: order theory | Markus Kusano]]></title>
+  <link href="http://markus-kusano.github.io/blog/categories/order-theory/atom.xml" rel="self"/>
+  <link href="http://markus-kusano.github.io/"/>
+  <updated>2014-01-28T09:32:35-05:00</updated>
+  <id>http://markus-kusano.github.io/</id>
+  <author>
+    <name><![CDATA[Markus Kusano]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Partial Orders and Programming]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/09/25/partial-orders-and-programming/"/>
+    <updated>2013-09-25T15:42:00-04:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/09/25/partial-orders-and-programming</id>
+    <content type="html"><![CDATA[<h2>Order Relations</h2>
+
+<p>Partial order relations are a fairly simple topic but it was one I initially
+struggled with. Order relations are how you define ideas like greater than,
+less than and equal to. If you are familiar with C++, you can think of this as
+overloading the <code>&gt;</code>, <code>&lt;</code> and <code>==</code> operators for your class. We will first
+discuss two order relations: total orders and partial orders and then discuss
+how they are related to concurrent programming.</p>
+
+<h3>Total Orders</h3>
+
+<p>Total order relations are those used for natural numbers (1,2,3). This is a
+fairly intuitive concept which has been taught to us all since Elementary
+school. The key idea is that every natural number can be compared with every
+other natural number as being greater than less than or equal.</p>
+
+<p>However, there are some concepts in which each item can only be compared to a
+subset of items; this is a partial order relation.</p>
+
+<h3>Partial Orders</h3>
+
+<p>Consider the following street addresses:</p>
+
+<ol>
+<li>479 Pennsylvania Ave.</li>
+<li>481 Pennsylvania Ave.</li>
+<li>1802 Oak Lane</li>
+</ol>
+
+
+<p>It makes sense to say that 479 Pennyslvania Ave. comes before 481 Pennsylvania
+Ave but, what can you say about the order between 479 Pennsylvania Ave. and
+1802 Oak Lane? Street addresses are examples of things that have a partial
+order relation.</p>
+
+<p>(the street address example comes from wikipedia&rsquo;s Partial Order page)</p>
+
+<h2>Concurrent Software Testing</h2>
+
+<p>So why is all this math useful? It turns out that concurrent programs can be
+represented as partial orders instead of total orders.</p>
+
+<p>One way to verify a concurrent program is to test all possible thread
+schedules; if all of them result in a desired output then the program is
+guaranteed to be safe. The problem is that this is an astronomically large
+number of tests.</p>
+
+<p>Since accesses to different memory locations do not effect each other, you only
+need to test schedule orders for each memory location instead of all the
+permutations of all the memory locations.</p>
+
+<p>This concept is called partial order reduction and is a well studied solution
+to the state explosion problem in concurrent software testing. However, it is
+not a perfect solution since it still results in very long testing times for
+large scale programs.</p>
+]]></content>
+  </entry>
+  
+</feed>

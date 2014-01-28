@@ -1,100 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Markus Kusano</title>
-  <meta name="author" content="Markus Kusano">
-
-  
-  <meta name="description" content="A friend recently told me he wanted to learn how to program and use a
-unix-like. He asked me to checkout a Intro to Algorithms,
-an open course from &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://markus-kusano.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Markus Kusano" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-  
-
-</head>
-
-<body   class="collapse-sidebar sidebar-footer" >
-  <header role="banner">
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:markus-kusano.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/reading">Reading list</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-  
+  <title><![CDATA[Markus Kusano]]></title>
+  <link href="http://markus-kusano.github.io/atom.xml" rel="self"/>
+  <link href="http://markus-kusano.github.io/"/>
+  <updated>2014-01-28T09:32:35-05:00</updated>
+  <id>http://markus-kusano.github.io/</id>
+  <author>
+    <name><![CDATA[Markus Kusano]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2014/01/03/learning-programming/">Learning Programming</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2014-01-03T10:59:18-05:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><p>A friend recently told me he wanted to learn how to program and use a
+    <title type="html"><![CDATA[Learning Programming]]></title>
+    <link href="http://markus-kusano.github.io/blog/2014/01/03/learning-programming/"/>
+    
+    <updated>2014-01-03T10:59:18-05:00</updated>
+    <id>http://markus-kusano.github.io/blog/2014/01/03/learning-programming</id>
+    
+    <content type="html"><![CDATA[<p>A friend recently told me he wanted to learn how to program and use a
 unix-like. He asked me to checkout a <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/">Intro to Algorithms</a>,
 an open course from MIT. I watched a video on a subject I didn&rsquo;t really know
 and it was interesting. Of course it&rsquo;s a class on algorithms so it is probably
@@ -125,44 +52,19 @@ to find the best textbook or video series to use. This probably goes for many
 things other than learning; I&rsquo;ve found myself drained of energy browsing
 Netflix for something to watch that I just give up. Obviously, counter
 productive to entertainment.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-  
+]]></content>
     
-      <h1 class="entry-title"><a href="/blog/2014/01/03/cheating/">Shades of Cheating</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  </entry>
   
-
-
-<time datetime="2014-01-03T09:25:13-05:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><p>I was always fairly willing, unless I got too lazy, to help out my friends with
+    <title type="html"><![CDATA[Shades of Cheating]]></title>
+    <link href="http://markus-kusano.github.io/blog/2014/01/03/cheating/"/>
+    
+    <updated>2014-01-03T09:25:13-05:00</updated>
+    <id>http://markus-kusano.github.io/blog/2014/01/03/cheating</id>
+    
+    <content type="html"><![CDATA[<p>I was always fairly willing, unless I got too lazy, to help out my friends with
 their projects. I got a great deal of help myself too. But, I wonder if I did a
 disservice to my friends by helping them too much on their homework. Would they
 have learned more by failing? Did they actually want help or just the answer?
@@ -213,44 +115,19 @@ getting job offers left and right? &ldquo;Life&rsquo;s tough&rdquo;?</p>
 One-on-one oral examinations? There&rsquo;s an obvious incentive for students to
 cheat, but what is the incentive for instructors to go through hoops to make
 &ldquo;un-cheatable&rdquo; assignments?</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-  
+]]></content>
     
-      <h1 class="entry-title"><a href="/blog/2013/12/11/blogging-setup/">My Blogging Setup</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  </entry>
   
-
-
-<time datetime="2013-12-11T18:36:00-05:00" pubdate data-updated="true">Dec 11<span>th</span>, 2013</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><p>This semester I&rsquo;ve been using <a href="http://octopress.org/">octopress</a> to generate by
+    <title type="html"><![CDATA[My Blogging Setup]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/12/11/blogging-setup/"/>
+    
+    <updated>2013-12-11T18:36:00-05:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/12/11/blogging-setup</id>
+    
+    <content type="html"><![CDATA[<p>This semester I&rsquo;ve been using <a href="http://octopress.org/">octopress</a> to generate by
 blog and github pages to display it. After setting it up, it&rsquo;s been pretty
 painless.</p>
 
@@ -267,44 +144,19 @@ information and everything can be simply stored in a git repo.</p>
 
 <p>If I had more time, I&rsquo;d like to try out other site generators like
 <a href="http://blog.getpelican.com/">pelican</a> to see what I&rsquo;m missing.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-  
+]]></content>
     
-      <h1 class="entry-title"><a href="/blog/2013/12/11/my-coding-setup/">My Coding Setup</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  </entry>
   
-
-
-<time datetime="2013-12-11T18:26:00-05:00" pubdate data-updated="true">Dec 11<span>th</span>, 2013</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><p>For the past three year&rsquo;s I&rsquo;ve been using Unix as my IDE for mostly C and C++
+    <title type="html"><![CDATA[My Coding Setup]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/12/11/my-coding-setup/"/>
+    
+    <updated>2013-12-11T18:26:00-05:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/12/11/my-coding-setup</id>
+    
+    <content type="html"><![CDATA[<p>For the past three year&rsquo;s I&rsquo;ve been using Unix as my IDE for mostly C and C++
 programming.</p>
 
 <p>The two main components are Vim and ctags.</p>
@@ -326,44 +178,19 @@ works great for when you don&rsquo;t understand what is going on.</p>
 
 <p>This leaves you with all the great core Unix tools to analyze, modify or create
 additional source code.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-  
+]]></content>
     
-      <h1 class="entry-title"><a href="/blog/2013/11/26/a-balanced-brace-checker/">A Balanced Brace Checker</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  </entry>
   
-
-
-<time datetime="2013-11-26T12:30:00-05:00" pubdate data-updated="true">Nov 26<span>th</span>, 2013</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><p>Recently in Intro to Unix we had to implement a balanced brace checker.
+    <title type="html"><![CDATA[A Balanced Brace Checker]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker/"/>
+    
+    <updated>2013-11-26T12:30:00-05:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker</id>
+    
+    <content type="html"><![CDATA[<p>Recently in Intro to Unix we had to implement a balanced brace checker.
 Specifically, the tool was supposed to ensure that every opening brace has a
 matching closing brace and vice versa.</p>
 
@@ -433,44 +260,19 @@ you&rsquo;re graduating? Will you really use them later in life?</p>
 means taking shortcuts. It means it will be held together with duct tape, and
 this is how real software is made. So I&rsquo;m not really sure what the best course
 of action would be.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-  
+]]></content>
     
-      <h1 class="entry-title"><a href="/blog/2013/11/07/ase-2013/">ASE 2013</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  </entry>
   
-
-
-<time datetime="2013-11-07T15:12:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2013</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><p>I was very lucky to be accepted for the tool demos at Automated Software
+    <title type="html"><![CDATA[ASE 2013]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/11/07/ase-2013/"/>
+    
+    <updated>2013-11-07T15:12:00-05:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/11/07/ase-2013</id>
+    
+    <content type="html"><![CDATA[<p>I was very lucky to be accepted for the tool demos at Automated Software
 Engineering 2013. I get to spend a week in California, hopefully eat some good
 food and learn about some other work people have been doing.</p>
 
@@ -495,44 +297,19 @@ represent real world bugs made by actual programmers.</p>
 <p>Here is a link to the preprint for my paper if you are interested.</p>
 
 <p><a href="https://raw.github.com/markus-kusano/markus-kusano.github.com/master/papers/CCmutator_ase2013_preprint.pdf">CCmutator ASE 2013 Preprint</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-  
+]]></content>
     
-      <h1 class="entry-title"><a href="/blog/2013/10/25/vcc-a-concurrent-c-verifier/">VCC: A Concurrent C Verifier</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  </entry>
   
-
-
-<time datetime="2013-10-25T16:59:00-04:00" pubdate data-updated="true">Oct 25<span>th</span>, 2013</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><p>VCC is a project from Microsoft Research that allows a user to annotate their
+    <title type="html"><![CDATA[VCC: A Concurrent C Verifier]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/10/25/vcc-a-concurrent-c-verifier/"/>
+    
+    <updated>2013-10-25T16:59:00-04:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/10/25/vcc-a-concurrent-c-verifier</id>
+    
+    <content type="html"><![CDATA[<p>VCC is a project from Microsoft Research that allows a user to annotate their
 code to prove certain properties. These properties can be things like pre- and
 post- conditions or overflows. For example, the user could say the function
 <code>divide(int a, int b)</code> should be be passed a value for <code>b</code> equal to zero.</p>
@@ -546,44 +323,19 @@ Hyper-V, a hypervisor, containing 60 thousand lines of code.</p>
 
 <p>Microsoft started releasing some work as open source, but under a restrictive
 license only supporting non-commercial use.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-  
+]]></content>
     
-      <h1 class="entry-title"><a href="/blog/2013/10/11/logic-analyzer-instrumentation/">Logic Analyzer Instrumentation: Realtime Systems</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  </entry>
   
-
-
-<time datetime="2013-10-11T16:45:00-04:00" pubdate data-updated="true">Oct 11<span>th</span>, 2013</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><h2>What is a Logic Analyzer</h2>
+    <title type="html"><![CDATA[Logic Analyzer Instrumentation: Realtime Systems]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/10/11/logic-analyzer-instrumentation/"/>
+    
+    <updated>2013-10-11T16:45:00-04:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/10/11/logic-analyzer-instrumentation</id>
+    
+    <content type="html"><![CDATA[<h2>What is a Logic Analyzer</h2>
 
 <p>A logic analyzer captures and displays digital signals. You plug in a logic
 analyzer input cable on another cable carrying some digital signal and the
@@ -637,44 +389,19 @@ requirements and also see areas of your system that are eating up a lot of time.
 GPIO pin. This is a little bit more messy to setup and you don&rsquo;t get any buffer
 to save your data (you could video tape the LEDs) but it is much cheaper than a
 logic analyzer.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-  
+]]></content>
     
-      <h1 class="entry-title"><a href="/blog/2013/09/25/partial-orders-and-programming/">Partial Orders and Programming</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  </entry>
   
-
-
-<time datetime="2013-09-25T15:42:00-04:00" pubdate data-updated="true">Sep 25<span>th</span>, 2013</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><h2>Order Relations</h2>
+    <title type="html"><![CDATA[Partial Orders and Programming]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/09/25/partial-orders-and-programming/"/>
+    
+    <updated>2013-09-25T15:42:00-04:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/09/25/partial-orders-and-programming</id>
+    
+    <content type="html"><![CDATA[<h2>Order Relations</h2>
 
 <p>Partial order relations are a fairly simple topic but it was one I initially
 struggled with. Order relations are how you define ideas like greater than,
@@ -729,44 +456,19 @@ permutations of all the memory locations.</p>
 to the state explosion problem in concurrent software testing. However, it is
 not a perfect solution since it still results in very long testing times for
 large scale programs.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-  
+]]></content>
     
-      <h1 class="entry-title"><a href="/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/">Modifying a Build System to Output LLVM IR</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+  </entry>
   
-
-
-<time datetime="2013-09-13T15:53:00-04:00" pubdate data-updated="true">Sep 13<span>th</span>, 2013</time>
-        
-      </p>
+  <entry>
     
-  </header>
-
-
-  <div class="entry-content"><h2>Introduction</h2>
+    <title type="html"><![CDATA[Modifying a Build System to Output LLVM IR]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/"/>
+    
+    <updated>2013-09-13T15:53:00-04:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir</id>
+    
+    <content type="html"><![CDATA[<h2>Introduction</h2>
 
 <p><a href="http://llvm.org/">LLVM</a> and its intermediate representation (IR) are quickly
 becoming and de facto standard for program analysis and instrumentation. This
@@ -843,128 +545,59 @@ installed. <code>export</code> the following environment variables.</p>
 
 <p>Without the GNU gold linker and LLVMgold plugin you will get linker errors by
 using <code>-emit-llvm</code>.</p>
-</div>
+]]></content>
+    
+  </entry>
   
+  <entry>
+    
+    <title type="html"><![CDATA[Art of Unix Programming Nuggets]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/08/29/art-of-unix-programming-nuggets/"/>
+    
+    <updated>2013-08-29T13:56:00-04:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/08/29/art-of-unix-programming-nuggets</id>
+    
+    <content type="html"><![CDATA[<blockquote><p>One of the many consequences of the exponential power-versus-time curve in
+computing, and the corresponding pace of software development, is that 50% of
+what one knows becomes obsolete over every 18 months. Unix does not abolish
+this phenomenon, but does do a good job of containing it. There&rsquo;s a bedrock
+of unchanging basics&mdash;-languages, system calls, and tool invocations&mdash;-that
+one can actually keep using for years, even decades.</p></blockquote>
+
+<p>How much of our education here will be effected by 50% decay in 18 months? We
+already are seeing courses being changed (intro to computer engineering,
+digital design one and two) and there is talk about the software track (1574,
+2574, 3574) being altered as well. These changes, particularly the switch to
+FPGAs over programmable logic devices, give great opportunity for us to complain
+about walking uphill both ways and to be arrogant about our skills in getting
+WinCUPL to work (did you try turning it on and off again?); but, this isn&rsquo;t
+very productive.</p>
+
+<p>Overall, this is perhaps more of a general education question that might be
+difficult to address directly in an introduction to Unix course but I think it
+is an interesting thought to keep in mind while being a full-time student.</p>
+
+<p>Related to this is:</p>
+
+<blockquote><p>Rule of Extensibility: Design for the future, because it will be here sooner
+than you think.</p></blockquote>
+
+<p>This rule is something that can be addressed in intro to Unix. The text
+surrounding this rule emphasizes quick prototyping (&ldquo;Make it run, then make it
+right, then make it fast&rdquo;). My programming knowledge is largely in C/C++, which
+is a very comfortable environment to me. I can hack on a python script written
+by someone else but I&rsquo;m not familiar with all the different ways higher level
+languages can quickly create solutions.</p>
+
+<p>The author also talks about a strategy of making the backend a C library and
+the frontend possibly a high-level language calling into this library. I think
+it would be nice to learn how to do this (communication over sockets, calling C
+code from python)</p>
+
+<p>Quotes from The Art of Unix Programming.
+<a href="http://catb.org/esr/writings/taoup/html/">http://catb.org/esr/writings/taoup/html/</a></p>
+]]></content>
+    
+  </entry>
   
-
-
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/01/03/learning-programming/">Learning Programming</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/03/cheating/">Shades of Cheating</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/12/11/blogging-setup/">My Blogging Setup</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/12/11/my-coding-setup/">My Coding Setup</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/26/a-balanced-brace-checker/">A Balanced Brace Checker</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/markus-kusano">@markus-kusano</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'markus-kusano',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Markus Kusano <br/>
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
-</p>
-
-</footer>
-  
-
-<script type="text/javascript">
-      var disqus_shortname = 'markusk';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Modifying a Build System to Output LLVM IR - Markus Kusano</title>
+  <meta name="author" content="Markus Kusano">
+
+  
+  <meta name="description" content="Introduction LLVM and its intermediate representation (IR) are quickly
+becoming and de facto standard for program analysis and instrumentation. This &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Markus Kusano" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:markus-kusano.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/reading">Reading list</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">Modifying a Build System to Output LLVM IR</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-13T15:53:00-04:00" pubdate data-updated="true">Sep 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>Introduction</h2>
+
+<p><a href="http://llvm.org/">LLVM</a> and its intermediate representation (IR) are quickly
+becoming and de facto standard for program analysis and instrumentation. This
+is a guide to modify an established build system of an application to output
+LLVM IR instead of machine code. Specifically, we will outline how to output
+LLVM IR for an application using
+<a href="https://en.wikipedia.org/wiki/GNU_build_system">autotools</a>.</p>
+
+<h2>Requirements</h2>
+
+<p>The requirements are:</p>
+
+<ul>
+<li>The GNU gold linker with plugin support</li>
+<li>The LLVMgold plugin</li>
+</ul>
+
+
+<p>Detailed instructions on using the LLVM GNU gold plugin can be found
+<a href="http://llvm.org/docs/GoldPlugin.html">here</a>.</p>
+
+<p>A quick summary to check if your system has support for LLVMgold:</p>
+
+<p>Run <code>/usr/bin/ld -v</code> and check if it reports <code>GNU gold</code>. To check if you have
+plugin support run <code>/usr/bin/ld -plugin</code>; if it reports <code>missing argument</code> then
+you are good to go. If it reports <code>unknown option</code> you will need to install or
+build a version of GNU gold that supports plugins.</p>
+
+<p>LLVM provides
+<a href="http://llvm.org/docs/GoldPlugin.html#lto-how-to-build">documentation</a>  on
+building GNU gold with plugin support and LLVMgold.</p>
+
+<h2>LLVM&rsquo;s gold Plugin</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Gold_(linker">gold</a>) is part of GNU binutils and
+is a linker with support for link time optimization (LTO). LLVM provides a gold
+plugin to preform LTO which inherently works by keeping source files as LLVM IR
+until link time. At link time, the entire program can be observed and
+optimized.</p>
+
+<p>We&rsquo;re not so interested in the LTO aspects but rather the ability to keep files
+as LLVM IR until link time. The end result is a set of &ldquo;object files&rdquo; which are
+LLVM IR; If you want to make an LLVM pass on an entire program, this is a good
+starting point but beyond the scope of this post.</p>
+
+<h2>Autotools</h2>
+
+<p>To work with autotools, we simply need to modify some environment variables to
+specify options passed to <code>clang</code>.</p>
+
+<p>If <code>clang</code> and <code>binutils</code> are not in your path, let <code>$PREFIX</code> be where they are
+installed. <code>export</code> the following environment variables.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export CC="$PREFIX/bin/clang -emit-llvm"
+</span><span class='line'>export CXX="$PREFIX/bin/clang++ -emit-llvm"
+</span><span class='line'>export AR="$PREFIX/bin/ar"
+</span><span class='line'>export NM="$PREFIX/bin/nm"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If they are in your path, you simply need:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export CC=clang -emit-llvm
+</span><span class='line'>export CXX=clang++ -emit-llvm</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, simply build the program as usual. The end result should be a set of
+<code>.o</code> files which are all LLVM bitcode.</p>
+
+<p>Without the GNU gold linker and LLVMgold plugin you will get linker errors by
+using <code>-emit-llvm</code>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Markus Kusano</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-13T15:53:00-04:00" pubdate data-updated="true">Sep 13<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/autotools/'>autotools</a>, <a class='category' href='/blog/categories/llvm/'>llvm</a>, <a class='category' href='/blog/categories/makefile/'>makefile</a>, <a class='category' href='/blog/categories/software-testing/'>software testing</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/" data-via="" data-counturl="http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/08/29/art-of-unix-programming-nuggets/" title="Previous Post: Art of Unix Programming Nuggets">&laquo; Art of Unix Programming Nuggets</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/09/25/partial-orders-and-programming/" title="Next Post: Partial Orders and Programming">Partial Orders and Programming &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/03/learning-programming/">Learning Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/03/cheating/">Shades of Cheating</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/11/blogging-setup/">My Blogging Setup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/11/my-coding-setup/">My Coding Setup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/26/a-balanced-brace-checker/">A Balanced Brace Checker</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/markus-kusano">@markus-kusano</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'markus-kusano',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Markus Kusano <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'markusk';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/';
+        var disqus_url = 'http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

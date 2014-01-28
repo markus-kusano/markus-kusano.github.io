@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: programming | Markus Kusano]]></title>
+  <link href="http://markus-kusano.github.io/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://markus-kusano.github.io/"/>
+  <updated>2014-01-28T09:32:35-05:00</updated>
+  <id>http://markus-kusano.github.io/</id>
+  <author>
+    <name><![CDATA[Markus Kusano]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Programming]]></title>
+    <link href="http://markus-kusano.github.io/blog/2014/01/03/learning-programming/"/>
+    <updated>2014-01-03T10:59:18-05:00</updated>
+    <id>http://markus-kusano.github.io/blog/2014/01/03/learning-programming</id>
+    <content type="html"><![CDATA[<p>A friend recently told me he wanted to learn how to program and use a
+unix-like. He asked me to checkout a <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/">Intro to Algorithms</a>,
+an open course from MIT. I watched a video on a subject I didn&rsquo;t really know
+and it was interesting. Of course it&rsquo;s a class on algorithms so it is probably
+pretty high level compared to a course on embedded devices.</p>
+
+<p>I learned how to program three or four years ago during summer break from
+reddit&rsquo;s <a href="reddit.com/r/carlhprogramming">Carl H. Programming</a>. His course is
+taught in C and had a decent amount of exercises. He pushed pointers and
+multi-dimensional arrays from the start which was really useful, especially
+once I started doing more C programming on micro-controllers. When I was using
+it, the course was never finished and abruptly ended with recursive algorithms
+with a tic-tac-to project. A year ago I got some closure when I programmed a
+tic-tac-to board and AI (min-max) in C++.</p>
+
+<p>This reminded me of something I read about reading literature. That it doesn&rsquo;t
+really matter if you read something and understand <em>everything</em> but more
+importantly that you understand something. The context was more like a kid
+reading <em>Gravity&rsquo;s Rainbow</em> than a kid reading <em>Structure and Interpretation of
+Computer Programs</em> but I wonder if the idea still holds weight for technical
+material. For something as vast as programming, especially when your goal is
+&ldquo;learn programming&rdquo; and nothing specific maybe just reading material and seeing
+what sticks is the best way to do it. Will the important topics rise to the top
+so that even if you miss it the first time maybe on the third or fourth you&rsquo;ll
+get it?</p>
+
+<p>At the very least, I think its good to avoid spending too much time on trying
+to find the best textbook or video series to use. This probably goes for many
+things other than learning; I&rsquo;ve found myself drained of energy browsing
+Netflix for something to watch that I just give up. Obviously, counter
+productive to entertainment.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Coding Setup]]></title>
+    <link href="http://markus-kusano.github.io/blog/2013/12/11/my-coding-setup/"/>
+    <updated>2013-12-11T18:26:00-05:00</updated>
+    <id>http://markus-kusano.github.io/blog/2013/12/11/my-coding-setup</id>
+    <content type="html"><![CDATA[<p>For the past three year&rsquo;s I&rsquo;ve been using Unix as my IDE for mostly C and C++
+programming.</p>
+
+<p>The two main components are Vim and ctags.</p>
+
+<p>Vim is a text editor that uses modal hotkeys. It took a bit to learn the basics
+but it keeps your fingers on the homerow for which keeps your fingers focused
+on typing. There&rsquo;s a lot of somewhat esoteric hotkeys to do stuff like change
+the case of a letter that seem kind of worthless, and maybe they are, but it
+seems like the ones that come in handy are the ones that stick in your brain
+after a while.</p>
+
+<p>Ctags generates a database of function names and definitions found in source
+files. You can run it in your project directory and it will generate file
+locations of function implementations.</p>
+
+<p>Ctags and Vim integrate together; while in Vim you can press a variety of
+hotkeys to open up and jump to the location of a functions definition. This
+works great for when you don&rsquo;t understand what is going on.</p>
+
+<p>This leaves you with all the great core Unix tools to analyze, modify or create
+additional source code.</p>
+]]></content>
+  </entry>
+  
+</feed>

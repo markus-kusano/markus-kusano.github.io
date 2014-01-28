@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Logic Analyzer Instrumentation: Realtime Systems - Markus Kusano</title>
+  <meta name="author" content="Markus Kusano">
+
+  
+  <meta name="description" content="What is a Logic Analyzer A logic analyzer captures and displays digital signals. You plug in a logic
+analyzer input cable on another cable carrying &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://markus-kusano.github.io/blog/2013/10/11/logic-analyzer-instrumentation">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Markus Kusano" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:markus-kusano.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/reading">Reading list</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">Logic Analyzer Instrumentation: Realtime Systems</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-11T16:45:00-04:00" pubdate data-updated="true">Oct 11<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>What is a Logic Analyzer</h2>
+
+<p>A logic analyzer captures and displays digital signals. You plug in a logic
+analyzer input cable on another cable carrying some digital signal and the
+analyzer will store the signal over some period of time.</p>
+
+<p>A fancy analyzer will be able to decode protocols such as I2C but this is not
+the focus of this post.</p>
+
+<h2>Debugging Realtime Systems on a Microcontroller</h2>
+
+<p>One of the broad problems with any program, not only on microcontrollers, is
+pinpointing what causes an error. The problem is exacerbated on realtime
+systems because a standard debugger inserting breakpoints changes timing
+characteristics and the control flow of the program. It is similar to the
+non-determinism introduced into multi-threaded programs due to thread
+scheduling.</p>
+
+<p>For example, if you set a breakpoint in the middle of an I2C protocol state
+machine in a state waiting for the slave to ACK or NACK could possibly cause
+hardware to timeout thinking that the slave has died when in reality it was the
+debugger stalling the program.</p>
+
+<p>In the past I&rsquo;ve gotten around this by constantly move breakpoints and then
+restarting the microcontroller to see control flow to pinpoint where an error
+has occurred. This is obviously time consuming and involves a lot of clicking.</p>
+
+<p>One was to see control flow on conventional programs is to create a log file.
+On a microcontroller that has no display this is difficult but a similar
+approach can be taken using code instrumentation.</p>
+
+<h2>Code Instrumentation</h2>
+
+<p>Most microcontrollers provide general purpose input/output (GPIO) pins. These
+can be hooked up to a logic analyzer to act as flags for different points in a
+program by setting them high or low. For example, you could add instrumentation
+to drive a pin high when you are in an interrupt handler accepting incoming
+data and then drive another pin high when the data is being processed outside
+the interrupt handler.</p>
+
+<p>This allows you to see <em>causality</em>. Event A stores incoming data into a buffer
+and then Event B processes the data. More importantly this lets you see
+failures in your causality relationships; the data comes in and is passed into
+a buffer but it fails to be processed.</p>
+
+<p>It will also provide timing information to see if you can meet your timing
+requirements and also see areas of your system that are eating up a lot of time.</p>
+
+<h2>You Don&rsquo;t Even Need a Logic Analyzer</h2>
+
+<p>Simple code instrumentation like this can be done by driving an LED high off a
+GPIO pin. This is a little bit more messy to setup and you don&rsquo;t get any buffer
+to save your data (you could video tape the LEDs) but it is much cheaper than a
+logic analyzer.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Markus Kusano</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-11T16:45:00-04:00" pubdate data-updated="true">Oct 11<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/debugging/'>debugging</a>, <a class='category' href='/blog/categories/embdedded-systems/'>embdedded systems</a>, <a class='category' href='/blog/categories/microcontrollers/'>microcontrollers</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://markus-kusano.github.io/blog/2013/10/11/logic-analyzer-instrumentation/" data-via="" data-counturl="http://markus-kusano.github.io/blog/2013/10/11/logic-analyzer-instrumentation/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/09/25/partial-orders-and-programming/" title="Previous Post: Partial Orders and Programming">&laquo; Partial Orders and Programming</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/10/25/vcc-a-concurrent-c-verifier/" title="Next Post: VCC: A Concurrent C Verifier">VCC: A Concurrent C Verifier &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/03/learning-programming/">Learning Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/03/cheating/">Shades of Cheating</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/11/blogging-setup/">My Blogging Setup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/11/my-coding-setup/">My Coding Setup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/26/a-balanced-brace-checker/">A Balanced Brace Checker</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/markus-kusano">@markus-kusano</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'markus-kusano',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Markus Kusano <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'markusk';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://markus-kusano.github.io/blog/2013/10/11/logic-analyzer-instrumentation/';
+        var disqus_url = 'http://markus-kusano.github.io/blog/2013/10/11/logic-analyzer-instrumentation/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
