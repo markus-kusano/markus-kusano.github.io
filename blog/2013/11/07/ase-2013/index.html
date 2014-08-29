@@ -25,7 +25,7 @@ Engineering 2013. I get to spend a week in California, hopefully eat some &helli
   <link href="/atom.xml" rel="alternate" title="Markus Kusano" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -36,7 +36,7 @@ Engineering 2013. I get to spend a week in California, hopefully eat some &helli
 
 </head>
 
-<body   class="collapse-sidebar sidebar-footer" >
+<body   >
   <header role="banner">
 </header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
@@ -52,9 +52,9 @@ Engineering 2013. I get to spend a week in California, hopefully eat some &helli
 </form>
   
 <ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
+  <li><a href="/blog">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/reading">Reading list</a></li>
+  <li><a href="/reading">Reading</a></li>
 </ul>
 
 </nav>
@@ -64,11 +64,9 @@ Engineering 2013. I get to spend a week in California, hopefully eat some &helli
 <article class="hentry" role="article">
   
   <header>
-  
     
       <h1 class="entry-title">ASE 2013</h1>
     
-  
     
       <p class="meta">
         
@@ -83,7 +81,7 @@ Engineering 2013. I get to spend a week in California, hopefully eat some &helli
   
 
 
-<time datetime="2013-11-07T15:12:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2013</time>
+<time datetime="2013-11-07T15:12:00-05:00" pubdate data-updated="true"></time>
         
       </p>
     
@@ -137,12 +135,12 @@ represent real world bugs made by actual programmers.</p>
   
 
 
-<time datetime="2013-11-07T15:12:00-05:00" pubdate data-updated="true">Nov 7<span>th</span>, 2013</time>
+<time datetime="2013-11-07T15:12:00-05:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ase-2013/'>ASE 2013'</a>, <a class='category' href='/blog/categories/ece2524/'>ece2524</a>, <a class='category' href='/blog/categories/mutant-generation/'>mutant generation</a>, <a class='category' href='/blog/categories/mutation-testing/'>mutation testing</a>
+    <a class='category' href='/blog/categories/ase-2013/'>ase 2013'</a>, <a class='category' href='/blog/categories/ece2524/'>ece2524</a>, <a class='category' href='/blog/categories/mutant-generation/'>mutant generation</a>, <a class='category' href='/blog/categories/mutation-testing/'>mutation testing</a>
   
 </span>
 
@@ -151,7 +149,7 @@ represent real world bugs made by actual programmers.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://markus-kusano.github.io/blog/2013/11/07/ase-2013/" data-via="" data-counturl="http://markus-kusano.github.io/blog/2013/11/07/ase-2013/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://markus-kusano.github.io/blog/2013/11/07/ase-2013/" data-via="" data-counturl="http://markus-kusano.github.io/blog/2013/11/07/ase-2013/" >Tweet</a>
   
   
   
@@ -264,7 +262,7 @@ represent real world bugs made by actual programmers.</p>
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -280,7 +278,7 @@ represent real world bugs made by actual programmers.</p>
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

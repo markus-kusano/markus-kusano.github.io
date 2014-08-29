@@ -25,7 +25,7 @@ Specifically, the tool was supposed to ensure that every opening brace has a &he
   <link href="/atom.xml" rel="alternate" title="Markus Kusano" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -36,7 +36,7 @@ Specifically, the tool was supposed to ensure that every opening brace has a &he
 
 </head>
 
-<body   class="collapse-sidebar sidebar-footer" >
+<body   >
   <header role="banner">
 </header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
@@ -52,9 +52,9 @@ Specifically, the tool was supposed to ensure that every opening brace has a &he
 </form>
   
 <ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
+  <li><a href="/blog">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/reading">Reading list</a></li>
+  <li><a href="/reading">Reading</a></li>
 </ul>
 
 </nav>
@@ -64,11 +64,9 @@ Specifically, the tool was supposed to ensure that every opening brace has a &he
 <article class="hentry" role="article">
   
   <header>
-  
     
       <h1 class="entry-title">A Balanced Brace Checker</h1>
     
-  
     
       <p class="meta">
         
@@ -83,7 +81,7 @@ Specifically, the tool was supposed to ensure that every opening brace has a &he
   
 
 
-<time datetime="2013-11-26T12:30:00-05:00" pubdate data-updated="true">Nov 26<span>th</span>, 2013</time>
+<time datetime="2013-11-26T12:30:00-05:00" pubdate data-updated="true"></time>
         
       </p>
     
@@ -182,7 +180,7 @@ of action would be.</p>
   
 
 
-<time datetime="2013-11-26T12:30:00-05:00" pubdate data-updated="true">Nov 26<span>th</span>, 2013</time>
+<time datetime="2013-11-26T12:30:00-05:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
@@ -196,7 +194,7 @@ of action would be.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker/" data-via="" data-counturl="http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker/" data-via="" data-counturl="http://markus-kusano.github.io/blog/2013/11/26/a-balanced-brace-checker/" >Tweet</a>
   
   
   
@@ -309,7 +307,7 @@ of action would be.</p>
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -325,7 +323,7 @@ of action would be.</p>
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

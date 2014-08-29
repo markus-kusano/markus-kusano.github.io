@@ -25,7 +25,7 @@ becoming and de facto standard for program analysis and instrumentation. This &h
   <link href="/atom.xml" rel="alternate" title="Markus Kusano" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -36,7 +36,7 @@ becoming and de facto standard for program analysis and instrumentation. This &h
 
 </head>
 
-<body   class="collapse-sidebar sidebar-footer" >
+<body   >
   <header role="banner">
 </header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
@@ -52,9 +52,9 @@ becoming and de facto standard for program analysis and instrumentation. This &h
 </form>
   
 <ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
+  <li><a href="/blog">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/reading">Reading list</a></li>
+  <li><a href="/reading">Reading</a></li>
 </ul>
 
 </nav>
@@ -64,11 +64,9 @@ becoming and de facto standard for program analysis and instrumentation. This &h
 <article class="hentry" role="article">
   
   <header>
-  
     
       <h1 class="entry-title">Modifying a Build System to Output LLVM IR</h1>
     
-  
     
       <p class="meta">
         
@@ -83,7 +81,7 @@ becoming and de facto standard for program analysis and instrumentation. This &h
   
 
 
-<time datetime="2013-09-13T15:53:00-04:00" pubdate data-updated="true">Sep 13<span>th</span>, 2013</time>
+<time datetime="2013-09-13T15:53:00-04:00" pubdate data-updated="true"></time>
         
       </p>
     
@@ -144,23 +142,17 @@ specify options passed to <code>clang</code>.</p>
 <p>If <code>clang</code> and <code>binutils</code> are not in your path, let <code>$PREFIX</code> be where they are
 installed. <code>export</code> the following environment variables.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export CC="$PREFIX/bin/clang -emit-llvm"
-</span><span class='line'>export CXX="$PREFIX/bin/clang++ -emit-llvm"
-</span><span class='line'>export AR="$PREFIX/bin/ar"
-</span><span class='line'>export NM="$PREFIX/bin/nm"</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>export CC="$PREFIX/bin/clang -emit-llvm"
+export CXX="$PREFIX/bin/clang++ -emit-llvm"
+export AR="$PREFIX/bin/ar"
+export NM="$PREFIX/bin/nm"
+</code></pre>
 
 <p>If they are in your path, you simply need:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>export CC=clang -emit-llvm
-</span><span class='line'>export CXX=clang++ -emit-llvm</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>export CC=clang -emit-llvm
+export CXX=clang++ -emit-llvm
+</code></pre>
 
 <p>Then, simply build the program as usual. The end result should be a set of
 <code>.o</code> files which are all LLVM bitcode.</p>
@@ -189,7 +181,7 @@ using <code>-emit-llvm</code>.</p>
   
 
 
-<time datetime="2013-09-13T15:53:00-04:00" pubdate data-updated="true">Sep 13<span>th</span>, 2013</time>
+<time datetime="2013-09-13T15:53:00-04:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
@@ -203,7 +195,7 @@ using <code>-emit-llvm</code>.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/" data-via="" data-counturl="http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/" data-via="" data-counturl="http://markus-kusano.github.io/blog/2013/09/13/modifying-a-build-system-to-output-llvm-ir/" >Tweet</a>
   
   
   
@@ -316,7 +308,7 @@ using <code>-emit-llvm</code>.</p>
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -332,7 +324,7 @@ using <code>-emit-llvm</code>.</p>
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

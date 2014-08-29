@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://markus-kusano.github.io/sitemap.xml 
