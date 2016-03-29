@@ -47,6 +47,12 @@ C/C++ Applications_, Markus Kusano and Chao Wang. 28th IEEE/ACM International
 Conference on Automated Software Engineering (ASE). Palo Alto, CA, 2013
 ([PDF](/papers/CCmutator_ase2013_preprint.pdf)).
 
+## Awards
+
+[NSF Graduate Research Fellow](<https://www.nsfgrfp.org/>) (2016)
+
+[Virginia Tech Bradley Fellow](<https://www.ece.vt.edu/graduate/awards.html>) (2014)
+
 ## Internships
 
 ### Summer 2016
