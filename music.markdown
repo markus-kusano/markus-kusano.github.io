@@ -263,7 +263,7 @@ like someone playing ping pong in a cavern, similar to Monolake's
 [Momentum](<http://www.discogs.com/Monolake-Momentum/release/194892>); however,
 this is much more laid back, and quirky at times.
 
-## Downtempo/Trip-hop
+## Trip-hop
 
 ### Gotan Project - La Revancha del Tango (2001)
 
@@ -304,6 +304,24 @@ Dark and almost ambient at times with contributions from reggae artist
 Dark, mostly instrumental. The only vocals are Aesop Rock on two tracks. Often
 drifts leftfield timbre-wise, e.g., on _Delight to the Sadist_, featuring, at
 first, almost droning synths and electronic percussion.
+
+## Downtempo
+
+###  Ulrich Schnauss – A Strangely Isolated Place (2003)
+
+{:refdef: style="text-align: center;"}
+<img src="art/strangely-isolated.jpg" width="400">
+{:refdef}
+
+Shoegaze 
+(think [Slowdive](<https://en.wikipedia.org/wiki/Slowdive>)/[My Bloody Valentine](<https://en.wikipedia.org/wiki/My_Bloody_Valentine_(band)>)) 
+inspired electronic music. It's subtle in that the songs are not
+just electronic covers of shoegaze. The influence can be heard in the timbre of
+some instruments, e.g., the synth almost sounding like feedback two minutes
+into track two; or, in the drums (compare those in the intro to 
+[A Letter From Home](<https://youtu.be/i_6Z5C8cE0Q>) to those in the first few 
+seconds of My Bloody Valentine's [Soon](<https://youtu.be/LseSx_hPJyQ>)).
+Overall, much of the wall-of-sound distortion is replaced with softer synths.
 
 ## Breakbeat
 
