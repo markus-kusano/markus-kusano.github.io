@@ -123,6 +123,12 @@ Pops and clicks and bloops and blips.
 Sometimes clear, often noisy guitar, repetitive bass, vocals sounding both
 melodic and like spoken word.
 
+### House of Love - The Creation Recordings (1988--1986)
+
+{:refdef: style="text-align: center;"}
+<img src="art/creation-recordings.jpg" width="400">
+{:refdef}
+
 ## Shoegaze
 
 ### Curve - Doppelgänger (1992)
