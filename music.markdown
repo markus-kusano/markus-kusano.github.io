@@ -346,3 +346,16 @@ Space themed, technoy at times. Quirky educational spoken-word samples.
 {:refdef: style="text-align: center;"}
 <img src="art/the-realness.jpg" width="400">
 {:refdef}
+
+## Drum and Bass
+
+### Amon Tobin -  Permutation (1996)
+
+{:refdef: style="text-align: center;"}
+<img src="art/permutation.jpg" width="400">
+{:refdef}
+
+Still often uses the high-speed drum-and-bass percussion but often with
+different instruments than in a typical breakbeat; much more "jazz." Less
+energy and darker than, say, 
+[Hard Normal Daddy](<https://en.wikipedia.org/wiki/Hard_Normal_Daddy>).
