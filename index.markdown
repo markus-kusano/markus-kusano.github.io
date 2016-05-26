@@ -12,13 +12,21 @@ footer: true
 {:refdef}
 
 I started my PhD at Virginia Tech in the Fall of 2014. My advisor is Chao Wang.
-My research interests are in program analysis, particularly the analysis of
-concurrent systems.
+My research interests are in automated formal-methods and program analysis,
+particularly the analysis of concurrent systems.
 
 ## Publications 
 
+_Flow-sensitive Composition of Thread-modular Abstract Interpretation_, Markus
+Kusano, Chao Wang. 24th International Symposium on the Foundations
+of Software Engineering (FSE). Seattle, Washington, 2016.
+
+_Static DOM Event Dependency Analysis for Testing Web Applications_, Chungha
+Sung, Markus Kusano, Nishant Sinha, Chao Wang. 24th International Symposium on
+the Foundations of Software Engineering (FSE). Seattle, Washington, 2016.
+
 _Assertion Guided Symbolic Execution of Multithreaded Programs_, Shengjian Guo,
-Markus Kusano, Chao Wang, Zijiang Yang, Aarti Gupta. 23rd ACM SIGSOFT
+Markus Kusano, Chao Wang, Zijiang Yang, Aarti Gupta. 23rd 
 International Symposium on the Foundations of Software Engineering (FSE).
 Bergamo, Italy, 2015 ([PDF](/papers/GuoKWYG15.pdf)).
 
@@ -28,7 +36,7 @@ Symposium on Software Testing and Analysis (ISSTA). Baltimore, Maryland, 2015
 ([PDF](/papers/concbugassist_preprint.pdf)) ([Slides](/papers/concbugassist_slides.pdf)).
 
 _Dynamic Partial Order Reduction for Relaxed Memory Models_, Naling Zhang,
-Markus Kusano, Chao Wang. 36th ACM SIGPLAN Conference on Programming
+Markus Kusano, Chao Wang. 36th Conference on Programming
 Language Design and Implementation (PLDI). Portland, Oregon, 2015 ([PDF](/papers/ZhangKW15.pdf)) 
 ([Slides](/papers/rinspect_slides.pdf)).
 
@@ -38,12 +46,12 @@ Software Engineering (ICSE). Florence, Italy, 2015 ([PDF](/papers/KusanoCW15.pdf
 ([Slides](/papers/udon_slides.pdf)).
 
 _Assertion Guided Abstraction: A Cooperative Optimization for Dynamic Partial
-Order Reduction_, Markus Kusano and Chao Wang. 29th IEEE/ACM International
+Order Reduction_, Markus Kusano and Chao Wang. 29th International
 Conference on Automated Software Engineering (ASE). Västerås, Sweden, 2014 ([PDF](/papers/kusano_pdpor.pdf)) 
 ([Slides](/papers/pdpor_slides.pdf)).
 
 _CCmutator: A Mutation Generator for Concurrency Constructs in Multithreaded
-C/C++ Applications_, Markus Kusano and Chao Wang. 28th IEEE/ACM International
+C/C++ Applications_, Markus Kusano and Chao Wang. 28th International
 Conference on Automated Software Engineering (ASE). Palo Alto, CA, 2013
 ([PDF](/papers/CCmutator_ase2013_preprint.pdf)).
 
