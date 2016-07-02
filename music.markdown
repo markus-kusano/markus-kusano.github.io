@@ -329,6 +329,15 @@ into track two; or, in the drums (compare those in the intro to
 seconds of My Bloody Valentine's [Soon](<https://youtu.be/LseSx_hPJyQ>)).
 Overall, much of the wall-of-sound distortion is replaced with softer synths.
 
+### Kruder & Dorfmeister - The K&D Sessions (1998)
+
+{:refdef: style="text-align: center;"}
+<img src="art/KandD.jpg" width="400">
+{:refdef}
+
+Dubby and blunted. Often repetitive similar to, say, [Endtroducing](<https://en.wikipedia.org/wiki/Endtroducing.....>) but in a
+very different style.
+
 ## Breakbeat
 
 ### Dimensional Holofonic Sound - Attention Earth People (2002)
