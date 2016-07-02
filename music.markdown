@@ -198,6 +198,15 @@ sound of its own; perhaps in part due to the warm garage-rock style production.
 
 Folksy, bluesy, (sometimes) noisey, reverby female vocals.
 
+### Pedro the Lion - It's Hard to Find a Friend (1998)
+
+{:refdef: style="text-align: center;"}
+<img src="art/hard-to-find-a-friend.jpg" width="400">
+{:refdef}
+
+Some tracks acoustic, some with a distorted guitar, one percussed by a
+metronome. Mix of slow-and-sparse and fast-ish-and-full tracks.
+
 ## Twee
 
 ### Tiger Trap - Tiger Trap (1995)
