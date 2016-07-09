@@ -17,6 +17,10 @@ particularly the analysis of concurrent systems.
 
 ## Publications 
 
+_Conc-iSE: Incremental Symbolic Execution of Concurrent Software_,  Shengjian
+Guo, Markus Kusano, and Chao Wang. 31st International
+Conference on Automated Software Engineering (ASE). Singapore, 2016 
+
 _Flow-sensitive Composition of Thread-modular Abstract Interpretation_, Markus
 Kusano, Chao Wang. 24th International Symposium on the Foundations
 of Software Engineering (FSE). Seattle, Washington, 2016.
@@ -52,7 +56,7 @@ Conference on Automated Software Engineering (ASE). Västerås, Sweden, 2014 ([P
 
 _CCmutator: A Mutation Generator for Concurrency Constructs in Multithreaded
 C/C++ Applications_, Markus Kusano and Chao Wang. 28th International
-Conference on Automated Software Engineering (ASE). Palo Alto, CA, 2013
+Conference on Automated Software Engineering (ASE). Palo Alto, California, 2013
 ([PDF](/papers/CCmutator_ase2013_preprint.pdf)).
 
 ## Awards
