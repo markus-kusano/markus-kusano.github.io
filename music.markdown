@@ -188,6 +188,15 @@ guitars. However, the rest have a more soul/funk sound with electric organs,
 and trumpets. You can compare Ian Svenonius' singing to soul but really its a
 sound of its own; perhaps in part due to the warm garage-rock style production.
 
+### Magazine - Real Life (1978)
+
+{:refdef: style="text-align: center;"}
+<img src="art/mag-real-life.jpg" width="400">
+{:refdef}
+
+Mix of synths and punky guitars.
+
+
 ## Slowcore
 
 ### Mazzy Star - So Tonight That I Might See (1993)
