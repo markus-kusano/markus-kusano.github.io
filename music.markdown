@@ -194,7 +194,7 @@ sound of its own; perhaps in part due to the warm garage-rock style production.
 <img src="art/mag-real-life.jpg" width="400">
 {:refdef}
 
-Mix of synths and punky guitars.
+Mix of synths and punky guitars. Vocals reminiscent of Count Chocula.
 
 
 ## Slowcore
