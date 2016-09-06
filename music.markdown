@@ -366,6 +366,14 @@ very different style.
 
 Space themed, technoy at times. Quirky educational spoken-word samples.
 
+###  Djinji Brown - Sirround Sound (2002)
+
+{:refdef: style="text-align: center;"}
+<img src="art/sirround-sound.jpg" width="400">
+{:refdef}
+
+Latin tinged at times, particularly the first four tracks.
+
 ## Thug Rap
 
 ### Cormega - The Realness (2001)
