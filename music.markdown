@@ -274,6 +274,14 @@ Instrumental, minimal, bass heavy.
 Some vocals, constantly changing effects, and a variety of different
 sounds over the tracks.
 
+###  Tommy McCook & The Supersonics – Pleasure Dub (1976)
+
+{:refdef: style="text-align: center;"}
+<img src="art/pleasure-dub.jpg" width="400">
+{:refdef}
+
+"Vocals" are often a single reverby section of what sounds like a word.
+
 ## "Electronic" Dub
 
 ###  Mikkel Metal – Close Selections (2005)
