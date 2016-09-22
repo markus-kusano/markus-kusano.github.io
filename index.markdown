@@ -19,7 +19,7 @@ particularly the analysis of concurrent systems.
 
 _Conc-iSE: Incremental Symbolic Execution of Concurrent Software_,  Shengjian
 Guo, Markus Kusano, and Chao Wang. 31st International
-Conference on Automated Software Engineering (ASE). Singapore, 2016 
+Conference on Automated Software Engineering (ASE). Singapore, 2016. ([PDF](/papers/concise16.pdf))
 
 _Flow-sensitive Composition of Thread-modular Abstract Interpretation_, Markus
 Kusano, Chao Wang. 24th International Symposium on the Foundations
@@ -27,7 +27,7 @@ of Software Engineering (FSE). Seattle, Washington, 2016.
 
 _Static DOM Event Dependency Analysis for Testing Web Applications_, Chungha
 Sung, Markus Kusano, Nishant Sinha, Chao Wang. 24th International Symposium on
-the Foundations of Software Engineering (FSE). Seattle, Washington, 2016.
+the Foundations of Software Engineering (FSE). Seattle, Washington, 2016. ([PDF](/papers/SungKSW16.pdf))
 
 _Assertion Guided Symbolic Execution of Multithreaded Programs_, Shengjian Guo,
 Markus Kusano, Chao Wang, Zijiang Yang, Aarti Gupta. 23rd 
