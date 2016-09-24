@@ -244,6 +244,16 @@ Smooth female vocals, jangly/distorted guitar; saccharine lyrics.
 <img src="art/ultra-magnetic.jpg" width="400">
 {:refdef}
 
+## Folk
+
+### Syd Barret -- The Madcap Laughs (1970)
+
+{:refdef: style="text-align: center;"}
+<img src="art/madcap-laughs.jpg" width="400">
+{:refdef}
+
+Psychedelicy folk rock. Quite quirky.
+
 
 ## Jazz
 
