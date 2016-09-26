@@ -100,7 +100,6 @@ The title and album art are, maybe, the best description.
 <img src="art/endless-falls.jpg" width="400">
 {:refdef}
 
-
 ## Minimal Electronic
 
 ###  Jan Jelinek – Loop-finding-jazz-records 
@@ -110,6 +109,15 @@ The title and album art are, maybe, the best description.
 {:refdef}
 
 Pops and clicks and bloops and blips.
+
+### DeepChord Presents Echospace -- The Coldest Season (2007)
+
+{:refdef: style="text-align: center;"}
+<img src="art/the-coldest-season.jpg" width="400">
+{:refdef}
+
+Sprawling dubby collection ranging from minimal techno, to beatless ambient.
+The album art matches the music.
 
 
 ## Alternative Rock
@@ -253,7 +261,6 @@ Smooth female vocals, jangly/distorted guitar; saccharine lyrics.
 {:refdef}
 
 Psychedelicy folk rock. Quite quirky.
-
 
 ## Jazz
 
