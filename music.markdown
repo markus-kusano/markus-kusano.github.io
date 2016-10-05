@@ -409,7 +409,7 @@ Latin tinged at times, particularly the first four tracks.
 
 ## Drum and Bass
 
-### Amon Tobin -  Permutation (1996)
+### Amon Tobin - Permutation (1996)
 
 {:refdef: style="text-align: center;"}
 <img src="art/permutation.jpg" width="400">
@@ -419,3 +419,23 @@ Still often uses the high-speed drum-and-bass percussion but often with
 different instruments than in a typical breakbeat; much more "jazz." Less
 energy and darker than, say, 
 [Hard Normal Daddy](<https://en.wikipedia.org/wiki/Hard_Normal_Daddy>).
+
+### Tremolite - un-LP (2008)
+
+{:refdef: style="text-align: center;"}
+<img src="art/un-lp.jpg" width="400">
+{:refdef}
+
+Sometimes drum-and-bass and sometimes breakbeat, features the ocasional
+hip-hop spoken-word sample
+
+## Jazz
+
+### Sun Ra and his Arkestra - Jazz in Silhouette (1959)
+
+{:refdef: style="text-align: center;"}
+<img src="art/jazz-in.jpg" width="400">
+{:refdef}
+
+Complex and "jazzy jazz;" some tracks feature "non-standard" instrumentation
+and chanting (e.g., Ancient Aiethopia)
