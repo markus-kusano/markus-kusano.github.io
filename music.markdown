@@ -354,6 +354,16 @@ Dark, mostly instrumental. The only vocals are Aesop Rock on two tracks. Often
 drifts leftfield timbre-wise, e.g., on _Delight to the Sadist_, featuring, at
 first, almost droning synths and electronic percussion.
 
+### Cibo Matto - Viva! La Woman (1996)
+
+{:refdef: style="text-align: center;"}
+<img src="art/viva-la-woman.jpg" width="400">
+{:refdef}
+
+Sonically and lyrically quirky. Lyrics are abstract and bordering on
+nonsensical; some tracks are more emotional (Sugar Water), others more fun
+(Candy Man).
+
 ## Downtempo
 
 ###  Ulrich Schnauss – A Strangely Isolated Place (2003)
