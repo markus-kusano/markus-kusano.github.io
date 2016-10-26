@@ -110,7 +110,7 @@ The title and album art are, maybe, the best description.
 
 Pops and clicks and bloops and blips.
 
-### DeepChord Presents Echospace -- The Coldest Season (2007)
+### DeepChord Presents Echospace - The Coldest Season (2007)
 
 {:refdef: style="text-align: center;"}
 <img src="art/the-coldest-season.jpg" width="400">
@@ -118,6 +118,20 @@ Pops and clicks and bloops and blips.
 
 Sprawling dubby collection ranging from minimal techno, to beatless ambient.
 The album art matches the music.
+
+
+### Blamstrain - Disfold (2006)
+
+{:refdef: style="text-align: center;"}
+<img src="art/disfold.jpg" width="400">
+{:refdef}
+
+Dubby "dark-ambient" techno at times, others a more synthy beatless soundscape.
+Contains a good dose of field recordings. Some more beat-containing tracks, e.g., the second, are
+reminiscent to [Kenji Yamamoto's](<https://en.wikipedia.org/wiki/Kenji_Yamamoto_(composer_born_1964)>)
+Metroid work. Others, e.g., the third, are similar to 
+[Liumin](<https://www.discogs.com/DeepChord-Presents-Echospace-Liumin/release/2328489>) 
+in the combinations of subdued bass drums over washing ambience.
 
 
 ## Alternative Rock
