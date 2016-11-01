@@ -17,6 +17,8 @@ footer: false
 
 [Snow](<https://en.wikipedia.org/wiki/Snow_(Pamuk_novel)>) by Orhan Pamuk
 
+[Norwegian Wood](<https://en.wikipedia.org/wiki/Norwegian_Wood_(novel)>) by Haruki Murakami
+
 ## 2015
 
 [All the Light We Cannot See](<https://en.wikipedia.org/wiki/All_the_Light_We_Cannot_See>) by Anthony Doerr
