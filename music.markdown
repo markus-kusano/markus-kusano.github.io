@@ -133,6 +133,17 @@ Metroid work. Others, e.g., the third, are similar to
 [Liumin](<https://www.discogs.com/DeepChord-Presents-Echospace-Liumin/release/2328489>) 
 in the combinations of subdued bass drums over washing ambience.
 
+## Post Rock
+
+### Beadhead - WhatFunLifeWas (1994)
+
+{:refdef: style="text-align: center;"}
+<img src="art/whatfunlifewas.jpg" width="400">
+{:refdef}
+
+Progresses between somber slowcore-eqsue portion, to a more distorted a grungy
+sound.
+
 
 ## Alternative Rock
 
