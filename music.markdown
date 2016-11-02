@@ -100,6 +100,15 @@ The title and album art are, maybe, the best description.
 <img src="art/endless-falls.jpg" width="400">
 {:refdef}
 
+### Oneohtrix Point Never -- Returnal (2011)
+
+{:refdef: style="text-align: center;"}
+<img src="art/returnal.jpg" width="400">
+{:refdef}
+
+Moves between noise (e.g., the first track), synthy ambient, and more beatful
+tracks (e.g., the title track). Has a bit of a synthy 80s vibe going on.
+
 ## Minimal Electronic
 
 ###  Jan Jelinek – Loop-finding-jazz-records 
