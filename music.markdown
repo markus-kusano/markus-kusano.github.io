@@ -346,6 +346,25 @@ like someone playing ping pong in a cavern, similar to Monolake's
 [Momentum](<http://www.discogs.com/Monolake-Momentum/release/194892>); however,
 this is much more laid back, and quirky at times.
 
+## Hip Hop
+
+### Count Bass D - Dwight Spitz (2002)
+
+{:refdef: style="text-align: center;"}
+<img src="art/dwight-spitz.jpg" width="400">
+{:refdef}
+
+Choppy samples. Songs themselves are also choppy, many clocking in at just over
+one minute. Some tracks feature [Doom](<https://en.wikipedia.org/wiki/MF_Doom>).
+
+## Thug Rap
+
+### Cormega - The Realness (2001)
+
+{:refdef: style="text-align: center;"}
+<img src="art/the-realness.jpg" width="400">
+{:refdef}
+
 ## Trip-hop
 
 ### Gotan Project - La Revancha del Tango (2001)
@@ -442,14 +461,6 @@ Space themed, technoy at times. Quirky educational spoken-word samples.
 {:refdef}
 
 Latin tinged at times, particularly the first four tracks.
-
-## Thug Rap
-
-### Cormega - The Realness (2001)
-
-{:refdef: style="text-align: center;"}
-<img src="art/the-realness.jpg" width="400">
-{:refdef}
 
 ## Drum and Bass
 
