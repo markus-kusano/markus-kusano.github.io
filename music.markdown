@@ -100,6 +100,10 @@ The title and album art are, maybe, the best description.
 <img src="art/endless-falls.jpg" width="400">
 {:refdef}
 
+The songs slowly build layers of minimally-repetitive sequences. Usually slow
+and dubby. Percussion consists of clicks washed with reverb. The art matches
+the mood well.
+
 ### Oneohtrix Point Never -- Returnal (2011)
 
 {:refdef: style="text-align: center;"}
