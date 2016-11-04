@@ -310,6 +310,15 @@ Psychedelicy folk rock. Quite quirky.
 
 Very non-abrasive, reminds me of Bossa Nova at times.
 
+### Sun Ra and his Arkestra - Jazz in Silhouette (1959)
+
+{:refdef: style="text-align: center;"}
+<img src="art/jazz-in.jpg" width="400">
+{:refdef}
+
+Complex and "jazzy jazz;" some tracks feature "non-standard" instrumentation
+and chanting (e.g., Ancient Aiethopia).
+
 ## Dub Reggae
 
 ### Dubclash - Dubclash (2002)
@@ -498,13 +507,3 @@ energy and darker than, say,
 Sometimes drum-and-bass and sometimes breakbeat, features the ocasional
 hip-hop spoken-word sample
 
-## Jazz
-
-### Sun Ra and his Arkestra - Jazz in Silhouette (1959)
-
-{:refdef: style="text-align: center;"}
-<img src="art/jazz-in.jpg" width="400">
-{:refdef}
-
-Complex and "jazzy jazz;" some tracks feature "non-standard" instrumentation
-and chanting (e.g., Ancient Aiethopia)
