@@ -369,7 +369,7 @@ one minute. Some tracks feature [Doom](<https://en.wikipedia.org/wiki/MF_Doom>).
 <img src="art/the-realness.jpg" width="400">
 {:refdef}
 
-## Trip-hop
+## Trip Hop
 
 ### Gotan Project - La Revancha del Tango (2001)
 
@@ -420,6 +420,16 @@ first, almost droning synths and electronic percussion.
 Sonically and lyrically quirky. Lyrics are abstract and bordering on
 nonsensical; some tracks are more emotional (Sugar Water), others more fun
 (Candy Man).
+
+### UNKLE - Psyence Fiction (1998)
+
+{:refdef: style="text-align: center;"}
+<img src="art/psyence-fiction.jpg" width="400">
+{:refdef}
+
+DJ Shadow production, somewhat similar to 
+[Entroducing](<https://en.wikipedia.org/wiki/Endtroducing.....>). 
+Features a variety of vocalists and rappers.
 
 ## Downtempo
 
