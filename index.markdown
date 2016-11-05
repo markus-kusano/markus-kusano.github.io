@@ -7,10 +7,6 @@ sharing: true
 footer: true
 ---
 
-{:refdef: style="text-align: center;"}
-<img src="images/suite.jpg" width="252">
-{:refdef}
-
 I started my PhD at Virginia Tech in the Fall of 2014. My advisor is Chao Wang.
 My research interests are in automated formal-methods and program analysis,
 particularly the analysis of concurrent systems.
