@@ -148,7 +148,7 @@ in the combinations of subdued bass drums over washing ambience.
 
 ## Post Rock
 
-### Beadhead - WhatFunLifeWas (1994)
+### Bedhead - WhatFunLifeWas (1994)
 
 {:refdef: style="text-align: center;"}
 <img src="art/whatfunlifewas.jpg" width="400">
