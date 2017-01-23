@@ -19,7 +19,7 @@ Conference on Automated Software Engineering (ASE). Singapore, 2016. ([PDF](/pap
 
 _Flow-sensitive Composition of Thread-modular Abstract Interpretation_, Markus
 Kusano, Chao Wang. 24th International Symposium on the Foundations
-of Software Engineering (FSE). Seattle, Washington, 2016. ([PDF](/papers/fs-ai.pdf))
+of Software Engineering (FSE). Seattle, Washington, 2016. ([PDF](/papers/fs-ai.pdf)) ([Slides](/papers/fs-ai-slides.pdf))
 
 _Static DOM Event Dependency Analysis for Testing Web Applications_, Chungha
 Sung, Markus Kusano, Nishant Sinha, Chao Wang. 24th International Symposium on
