@@ -7,6 +7,12 @@ sharing: false
 footer: false
 ---
 
+## 2017
+
+[The Broom of the System](<https://en.wikipedia.org/wiki/The_Broom_of_the_System>) by David Foster Wallace
+
+[What I Talk About When I Talk About Running](<https://en.wikipedia.org/wiki/What_I_Talk_About_When_I_Talk_About_Running>) by Haruki Murakami 
+
 ## 2016
 
 [Swann's Way (In Search of Lost Time Vol. One)](<https://en.wikipedia.org/wiki/In_Search_of_Lost_Time>) by Marcel Proust
