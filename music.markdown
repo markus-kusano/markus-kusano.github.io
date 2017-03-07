@@ -175,6 +175,15 @@ melodic and like spoken word.
 <img src="art/creation-recordings.jpg" width="400">
 {:refdef}
 
+### Big Star - Number 1 Record (1972)
+
+{:refdef: style="text-align: center;"}
+<img src="art/1-record.png" width="400">
+{:refdef}
+
+'70s take on '60s folk-rock.
+
+
 ## Shoegaze
 
 ### Curve - Doppelgänger (1992)
