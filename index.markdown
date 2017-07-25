@@ -13,6 +13,10 @@ particularly the analysis of concurrent systems.
 
 ## Publications 
 
+_Thread-Modular Static Analysis for Relaxed Memory Models_, Markus Kusano, and
+Chao Wang. 25th International Symposium on the Foundations
+of Software Engineering (FSE). Paderborn, Germany, 2017. ([PDF](papers/KusanoW17.pdf))
+
 _Conc-iSE: Incremental Symbolic Execution of Concurrent Software_,  Shengjian
 Guo, Markus Kusano, and Chao Wang. 31st International
 Conference on Automated Software Engineering (ASE). Singapore, 2016. ([PDF](/papers/concise16.pdf))
