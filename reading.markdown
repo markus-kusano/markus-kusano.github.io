@@ -17,6 +17,8 @@ footer: false
 
 [The Unbearable Lightness of Being](http://en.wikipedia.org/wiki/The_Unbearable_Lightness_of_Being) by Milan Kundera
 
+[Brief Interviews with Hideous Men](<https://en.wikipedia.org/wiki/Brief_Interviews_with_Hideous_Men>) by David Foster Wallace
+
 ## 2016
 
 [Swann's Way (In Search of Lost Time Vol. One)](<https://en.wikipedia.org/wiki/In_Search_of_Lost_Time>) by Marcel Proust
