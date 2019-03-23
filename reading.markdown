@@ -7,6 +7,10 @@ sharing: false
 footer: false
 ---
 
+## 2018
+
+[Infinite Jest](<https://en.wikipedia.org/wiki/Infinite_Jest>) by David Foster Wallace
+
 ## 2017
 
 [The Broom of the System](<https://en.wikipedia.org/wiki/The_Broom_of_the_System>) by David Foster Wallace
