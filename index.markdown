@@ -7,11 +7,16 @@ sharing: true
 footer: true
 ---
 
-I started my PhD at Virginia Tech in the Fall of 2014. My advisor is Chao Wang.
-My research interests are in automated formal-methods and program analysis,
-particularly the analysis of concurrent systems.
+I'm a Software Engineer at Google. I work on automated tools to increase
+security, deepen program understanding, and improve developer productivity.
+
+I got my PhD at Virginia Tech. My advisor was Chao Wang. My research interests
+are in automated formal-methods and program analysis, particularly the analysis
+of concurrent systems.
 
 ## Publications 
+
+_Modular Verification of Interrupt-driven Software_, Chungha Sung, Markus Kusano, Chao Wang. ASE 2017.
 
 _Thread-Modular Static Analysis for Relaxed Memory Models_, Markus Kusano, and
 Chao Wang. 25th International Symposium on the Foundations
@@ -67,9 +72,17 @@ Conference on Automated Software Engineering (ASE). Palo Alto, California, 2013
 
 ## Internships
 
+### Summer 2017
+
+Google, New York City, New York.
+
+Designed automated testing algorithms.
+
 ### Summer 2016
 
 Samsung Research America, Mountain View CA.
+
+Designed automated testing framework for concurreny issues in web sites.
 
 ### Summer 2014 & 2015
 
